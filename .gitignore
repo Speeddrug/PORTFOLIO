@@ -1,0 +1,9 @@
+# Node.js
+node_modules/
+.env
+
+# React
+frontend/node_modules/
+frontend/build/
+admin-panel/node_modules/
+admin-panel/build/
