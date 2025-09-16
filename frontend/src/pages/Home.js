@@ -42,7 +42,7 @@ function Home() {
       description:
         "My portfolio project featuring React frontend, Node.js backend, MongoDB database, and contact form integration.",
       tech: "REACT JS, TAILWIND CSS, NODE JS, MONGODB",
-      link: "#",
+      link: "portfolio-rdlq-ikxekzo5k-speeddrugs-projects.vercel.app",
       image: projectImg2,
     },
     {
