@@ -10,7 +10,7 @@ function Home() {
     "https://www.xenonstack.com/hubfs/xenonstack-credit-card-fraud-detection.png";
   const projectImg2 =
     "https://static.resumegiants.com/wp-content/uploads/sites/25/2022/06/09105622/Professional-portfolio-736x414.webp";
-  const projectImg3 = "https://via.placeholder.com/400x300";
+  const projectImg3 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHNMp_kq-cjP56qh3YQXd7s7rREApK967VSmXYoS0AxBbamBeKWS6W9M7kSp8rG3eHopM&usqp=CAU";
 
   const skills = [
     { name: "Java", color: "bg-red-500" },
@@ -20,8 +20,9 @@ function Home() {
     { name: "HTML", color: "bg-orange-400" },
     { name: "CSS", color: "bg-purple-500" },
     { name: "JavaScript", color: "bg-yellow-300" },
-    { name: "Tailwind", color: "bg-teal-500" },
-    { name: "React", color: "bg-cyan-500" },
+    { name: "Tailwind css", color: "bg-teal-500" },
+    { name: "React JS", color: "bg-cyan-500" },
+    { name: "Vite", color: "bg-blue-500" },
     { name: "Salesforce ADMIN", color: "bg-purple-500" },
     { name: "Basics of DSA", color: "bg-green-500" },
     { name: "Problem Solving and Analytical skills", color: "bg-red-500" },
@@ -45,11 +46,16 @@ function Home() {
       image: projectImg2,
     },
     {
-      name: "News App",
-      description:
-        "A live news app that delivers latest headlines from multiple sources around the world.",
-      tech: "ReactJS, News API",
-      link: "#",
+      name: "Speedy_BOOKSHOW",
+      description: "Speedy_Bookshow is a movie ticket booking web app that allows users to quickly browse movies, view showtimes, and book tickets in a seamless, responsive interface. " +
+"It focuses on speed, simplicity, and a great user experience — making it easy to book tickets on both desktop and mobile devices.",
+tech: `Frontend: React.js, Tailwind CSS, Vite
+Clerk → For secure login, signup, and user session management
+AOS (Animate on Scroll)
+Local Assets (Dummy Data)`,
+
+      
+      link: "https://github.com/Speeddrug/MOVIETICKETBOOK",
       image: projectImg3,
     },
   ];
