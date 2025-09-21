@@ -1,17 +1,9 @@
-// src/pages/Home.js
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import image_profile from "../image_profile.jpeg";
 
 function Home() {
-  const illustrationImg = "https://via.placeholder.com/500x600?text=Illustration";
-  const projectImg1 =
-    "https://www.xenonstack.com/hubfs/xenonstack-credit-card-fraud-detection.png";
-  const projectImg2 =
-    "https://static.resumegiants.com/wp-content/uploads/sites/25/2022/06/09105622/Professional-portfolio-736x414.webp";
-  const projectImg3 = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHNMp_kq-cjP56qh3YQXd7s7rREApK967VSmXYoS0AxBbamBeKWS6W9M7kSp8rG3eHopM&usqp=CAU";
-
   const skills = [
     { name: "Java", color: "bg-red-500" },
     { name: "Python", color: "bg-blue-500" },
@@ -24,7 +16,6 @@ function Home() {
     { name: "React JS", color: "bg-cyan-500" },
     { name: "Vite", color: "bg-blue-500" },
     { name: "Salesforce ADMIN", color: "bg-purple-500" },
-    { name: "Basics of DSA", color: "bg-green-500" },
     { name: "Problem Solving and Analytical skills", color: "bg-red-500" },
   ];
 
@@ -32,10 +23,11 @@ function Home() {
     {
       name: "CREDICARD_DEDECTION",
       description:
-        "Interactive Credit Card Fraud Detection App using Logistic Regression, SVM, Random Forest, and Autoencoder models. Users input transaction features via sliders, get real-time fraud predictions with visual insights, and a voting system determines the final result. Dark mode UI and easy Streamlit deployment.",
+        "Interactive Credit Card Fraud Detection App using Logistic Regression, SVM, Random Forest, and Autoencoder models.",
       tech: "PYTHON, Machine learning models, streamlit",
       link: "https://github.com/Speeddrug/CreditCard_Dedection",
-      image: projectImg1,
+      image:
+        "https://www.xenonstack.com/hubfs/xenonstack-credit-card-fraud-detection.png",
     },
     {
       name: "MY portfolio",
@@ -43,20 +35,17 @@ function Home() {
         "My portfolio project featuring React frontend, Node.js backend, MongoDB database, and contact form integration.",
       tech: "REACT JS, TAILWIND CSS, NODE JS, MONGODB",
       link: "#",
-      image: projectImg2,
+      image:
+        "https://static.resumegiants.com/wp-content/uploads/sites/25/2022/06/09105622/Professional-portfolio-736x414.webp",
     },
     {
       name: "Speedy_BOOKSHOW",
-      description: "Speedy_Bookshow is a movie ticket booking web app that allows users to quickly browse movies, view showtimes, and book tickets in a seamless, responsive interface. " +
-"It focuses on speed, simplicity, and a great user experience — making it easy to book tickets on both desktop and mobile devices.",
-tech: `Frontend: React.js, Tailwind CSS, Vite
-Clerk → For secure login, signup, and user session management
-AOS (Animate on Scroll)
-Local Assets (Dummy Data)`,
-
-      
+      description:
+        "Movie ticket booking web app with a fast, responsive UI, showtime browsing, and seamless booking flow.",
+      tech: "React.js, Tailwind CSS, Clerk Auth, AOS, Vite",
       link: "https://github.com/Speeddrug/MOVIETICKETBOOK",
-      image: projectImg3,
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHNMp_kq-cjP56qh3YQXd7s7rREApK967VSmXYoS0AxBbamBeKWS6W9M7kSp8rG3eHopM&usqp=CAU",
     },
   ];
 
@@ -64,7 +53,7 @@ Local Assets (Dummy Data)`,
     "State level Basketball Player – Winner in Year 2024 and 2022",
     "National Level Tennis Ball Cricket Player",
     "House captain in School",
-    "Participated in Robosocer in technical fest – co-created a soccer playing robot prototype",
+    "Participated in Robosoccer in technical fest – co-created a soccer playing robot prototype",
   ];
 
   const education = [
@@ -81,7 +70,7 @@ Local Assets (Dummy Data)`,
       {/* Hero Section */}
       <section
         id="home"
-        className="flex flex-col md:flex-row items-center w-full max-w-6xl mx-auto mt-12"
+        className="flex flex-col md:flex-row items-center w-full max-w-6xl mx-auto mt-12 scroll-mt-24"
       >
         <div className="flex-1 text-center md:text-left md:pr-8">
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight text-white">
@@ -131,21 +120,33 @@ Local Assets (Dummy Data)`,
         </div>
       </section>
 
-      {/* Skills Section */}
-      <div className="mt-20 flex flex-wrap gap-4 justify-center max-w-5xl mx-auto">
-        {skills.map((skill) => (
-          <span
-            key={skill.name}
-            className={`${skill.color} px-6 py-3 rounded-full text-white text-sm md:text-base font-semibold shadow-md`}
-          >
-            {skill.name}
-          </span>
-        ))}
-      </div>
+     
+{/* Skills Section */}
+<div id="skills" className="mt-28 relative text-center scroll-mt-32">
+  <h2 className="text-5xl font-bold  text-purple-500 mb-4 relative z-10">
+    Skills
+  </h2>
+  <p className="text-gray-300 text-lg mb-12 relative z-10">
+    A snapshot of my technical expertise and tools I work with.
+  </p>
+
+  <div className="flex flex-wrap gap-4 justify-center max-w-5xl mx-auto">
+    {skills.map((skill) => (
+      <span
+        key={skill.name}
+        className={`${skill.color} px-6 py-3 rounded-full text-white text-sm md:text-base font-semibold shadow-md`}
+      >
+        {skill.name}
+      </span>
+    ))}
+  </div>
+</div>
+
 
       {/* Projects Heading */}
-      <div id="projects" className="mt-28 relative text-center">
-        <h2 className="text-5xl font-bold text-pink-500 mb-4 relative z-10">
+      <div id="projects" className="mt-28 relative text-center scroll-mt-24">
+        <h2 className="text-5xl font-bold  text-purple-500
+         mb-4 relative z-10">
           Projects
         </h2>
         <p className="text-gray-300 text-lg mb-12 relative z-10">
@@ -154,7 +155,7 @@ Local Assets (Dummy Data)`,
         </p>
       </div>
 
-      {/* Projects Section - Image Left, Description Right */}
+      {/* Projects Section */}
       <div className="flex flex-col gap-16 max-w-6xl mx-auto mb-16">
         {projects.map((project, index) => (
           <div
@@ -163,7 +164,6 @@ Local Assets (Dummy Data)`,
             data-aos="fade-up"
             data-aos-delay={index * 200}
           >
-            {/* Image Left */}
             <div className="flex-1 flex justify-center">
               <img
                 src={project.image}
@@ -171,8 +171,6 @@ Local Assets (Dummy Data)`,
                 className="rounded-xl shadow-lg w-full max-w-md object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
-
-            {/* Description Right */}
             <div className="flex-1 bg-gray-800 p-6 rounded-xl shadow-md transform transition duration-300 hover:scale-105 hover:shadow-2xl max-w-full">
               <h3 className="text-2xl font-semibold mb-2">{project.name}</h3>
               <p className="text-gray-300 mb-2">{project.description}</p>
@@ -190,18 +188,18 @@ Local Assets (Dummy Data)`,
         ))}
       </div>
 
+     {/* About Me Section */}
+<div id="aboutme" className="mt-28 text-center scroll-mt-32">
+  <h2 className="text-5xl font-bold text-purple-500 mb-4">About Me</h2>
+  <p className="text-gray-300 text-lg max-w-3xl mx-auto mb-12">
+    I am a passionate Computer Science student who loves building web applications, 
+    experimenting with AI/ML models, and solving problems with creative solutions. 
+    (You can edit this paragraph later with your own description.)
+  </p>
+</div>
       {/* Education & Extra-curricular */}
-      <div className="mt-16 w-full max-w-6xl mx-auto grid md:grid-cols-2 gap-6 mb-16">
-        {/* Education Card */}
-        <div
-          className="relative bg-gray-800 p-6 rounded-xl shadow-md overflow-hidden"
-          data-aos="fade-right"
-        >
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwqJ5FAIIgAxEqYimMjg7w9HS_LmqgPy9BVA&s"
-            alt="Education Background"
-            className="absolute inset-0 w-full h-full object-cover opacity-20"
-          />
+      <div className="w-full max-w-6xl mx-auto grid md:grid-cols-2 gap-6 mb-16">
+        <div className="relative bg-gray-800 p-6 rounded-xl shadow-md overflow-hidden" data-aos="fade-right">
           <h2 className="text-pink-500 text-xl font-semibold mb-4 relative z-10">
             Education
           </h2>
@@ -214,16 +212,7 @@ Local Assets (Dummy Data)`,
           </div>
         </div>
 
-        {/* Extra-curricular Card */}
-        <div
-          className="relative bg-gray-800 p-6 rounded-xl shadow-md overflow-hidden"
-          data-aos="fade-left"
-        >
-          <img
-            src="https://static.vecteezy.com/system/resources/thumbnails/022/336/935/small/basketball-background-illustration-ai-generative-free-photo.jpg"
-            alt="Extra-curricular Background"
-            className="absolute inset-0 w-full h-full object-cover opacity-20"
-          />
+        <div className="relative bg-gray-800 p-6 rounded-xl shadow-md overflow-hidden" data-aos="fade-left">
           <h2 className="text-pink-500 text-xl font-semibold mb-4 relative z-10">
             Extra-curricular Activities
           </h2>

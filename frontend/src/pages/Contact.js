@@ -6,12 +6,12 @@ import ContactForm from "../components/ContactForm"; // make sure the path is co
 
 function Contact() {
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="w-full flex flex-col items-center ">
       <section
         id="contact"
-        className="w-full max-w-6xl mt-20 flex flex-col items-center"
+        className="w-full max-w-6xl mt-20 flex flex-col items-center pb-20 "
       >
-        <h2 className="text-4xl font-bold mb-6">Contact Me</h2>
+        <h2 className="text-4xl font-bold mb-6  text-purple-500">Contact Me</h2>
 
         {/* Use the functional ContactForm component */}
         <ContactForm />

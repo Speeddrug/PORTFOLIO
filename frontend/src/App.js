@@ -4,10 +4,9 @@ import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-start px-6 scroll-smooth">
-
+    <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center px-8 scroll-smooth">
       {/* Sticky Navbar */}
-      <nav className="w-full max-w-6xl flex justify-between items-center py-6 sticky top-0 bg-gray-900 z-50">
+      <nav className="w-full max-w-6xl flex justify-between items-center px-8 py-6 sticky top-0 bg-gray-900 z-50 h-24">
         <h1 className="text-2xl font-bold text-red-500">Yepo</h1>
 
         <ul className="flex gap-6 text-gray-300 font-medium">
@@ -15,15 +14,13 @@ function App() {
             <a href="#home">Home</a>
           </li>
           <li className="hover:text-white cursor-pointer transition-colors">
-          
+            <a href="#skills">Skills</a>
+          </li>
+          <li className="hover:text-white cursor-pointer transition-colors">
             <a href="#projects">Projects</a>
-
           </li>
           <li className="hover:text-white cursor-pointer transition-colors">
-            <a href="#mobileapps">Mobile Apps</a>
-          </li>
-          <li className="hover:text-white cursor-pointer transition-colors">
-            <a href="#about me">About me</a>
+            <a href="#aboutme">About me</a>
           </li>
           <li className="hover:text-white cursor-pointer transition-colors">
             <a href="#contact">Contact</a>
@@ -39,16 +36,13 @@ function App() {
       </nav>
 
       {/* Home Section */}
-      <section id="home" className="w-full">
+      <section id="home" className="w-full scroll-mt-24">
         <Home />
       </section>
 
-      {/* Projects Section Anchor */}
-      <div id="projects"></div>
       
-
       {/* Contact Section */}
-      <section id="contact" className="w-full">
+      <section id="contact" className="w-full scroll-mt-10">
         <Contact />
       </section>
     </div>
