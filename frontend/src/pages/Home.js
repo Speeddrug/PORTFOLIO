@@ -58,7 +58,8 @@ function Home() {
 
   const education = [
     "B.Tech Computer Science - DIT University",
-    "High School - ST THOMAS' COLLEGE, DEHRADUN",
+    " secondary High School- ST THOMAS' COLLEGE, DEHRADUN",
+    "High School- ST THOMAS' COLLEGE, DEHRADUN",
   ];
 
   useEffect(() => {
@@ -81,9 +82,9 @@ function Home() {
             AI engineer and web developer.
           </h1>
           <p className="mt-4 text-gray-300 text-sm max-w-md md:max-w-xl">
-            I am a proactive B.Tech Computer Science undergraduate from DIT
-            University with a strong foundation in AI, software, and web
-            development. Also well-acquainted with Salesforce admin CRM tool.
+           "I'm a B.Tech CS student passionate about AI, web, and software development.
+            Also well-acquainted with Salesforce admin CRM tool.I love creating impactful projects
+            and bring creative ideas to life—let’s build something awesome together!"
           </p>
         </div>
 
@@ -110,12 +111,16 @@ function Home() {
             >
               LinkedIn
             </a>
-            <a
-              href="mailto:pragatiaggarwal2005@gmail.com"
-              className="bg-gray-700 hover:bg-gray-800 px-4 py-2 rounded-lg"
-            >
-              Email
-            </a>
+      <a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=pragatiaggarwal2005@gmail.com"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="bg-gray-700 hover:bg-gray-800 px-4 py-2 rounded-lg"
+>
+  Email
+</a>
+
+
           </div>
         </div>
       </section>
@@ -150,8 +155,7 @@ function Home() {
           Projects
         </h2>
         <p className="text-gray-300 text-lg mb-12 relative z-10">
-          Explore a selection of my recent work, showcasing my skills in full
-          stack development.
+          Explore a selection of my recent work,showcasing my skills
         </p>
       </div>
 
@@ -192,10 +196,11 @@ function Home() {
 <div id="aboutme" className="mt-28 text-center scroll-mt-32">
   <h2 className="text-5xl font-bold text-purple-500 mb-4">About Me</h2>
   <p className="text-gray-300 text-lg max-w-3xl mx-auto mb-12">
-    I am a passionate Computer Science student who loves building web applications, 
-    experimenting with AI/ML models, and solving problems with creative solutions. 
-    (You can edit this paragraph later with your own description.)
+    Passionate Computer Science student exploring AI/ML and  web development. I love building creative solutions,
+     experimenting with new technologies, and continuously learning to improve my skills.
+      I am a determined and curious individual who enjoys sports, going to the gym, biking, and reading fiction novels.
   </p>
+  
 </div>
       {/* Education & Extra-curricular */}
       <div className="w-full max-w-6xl mx-auto grid md:grid-cols-2 gap-6 mb-16">
