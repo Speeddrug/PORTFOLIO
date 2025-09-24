@@ -1,48 +1,49 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 function ContactForm() {
+  const formRef = useRef();
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     setStatus("Sending...");
 
-    try {
-      // Directly call backend URL
-      const response = await axios.post("http://localhost:5000/api/contact", formData);
-
-      console.log("Backend response:", response); // debug
-      if (response.data?.message) {
-        setStatus(response.data.message); // success
-      } else if (response.data?.error) {
-        setStatus("Error: " + response.data.error);
-      } else {
-        setStatus("Unexpected response from server");
-      }
-
-      setFormData({ name: "", email: "", message: "" });
-    } catch (err) {
-      console.error("Error sending message:", err);
-
-      if (err.response) {
-        setStatus("Error: " + err.response.data.error);
-      } else if (err.request) {
-        setStatus("Cannot reach backend. Is server running?");
-      } else {
-        setStatus("Error: " + err.message);
-      }
-    }
+    emailjs
+      .send(
+        "service_geii2wr",       // Your EmailJS service ID
+        "template_j2q3h52",      // Your EmailJS template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        "dqY_dCMs6Autq-f3w"      // Your EmailJS public key
+      )
+      .then(
+        () => {
+          setLoading(false);
+          setStatus("Thank you! I will get back to you soon.");
+          setFormData({ name: "", email: "", message: "" });
+        },
+        (error) => {
+          console.error(error);
+          setLoading(false);
+          setStatus("Something went wrong. Please try again.");
+        }
+      );
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-md flex flex-col gap-4">
+    <form ref={formRef} onSubmit={handleSubmit} className="w-full max-w-md flex flex-col gap-4">
       <input
         type="text"
         name="name"
@@ -72,9 +73,9 @@ function ContactForm() {
       />
       <button
         type="submit"
-        className="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-lg font-semibold btn-animate"
+        className="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-lg font-semibold"
       >
-        Send Message
+        {loading ? "Sending..." : "Send Message"}
       </button>
       {status && <p className="text-center mt-2">{status}</p>}
     </form>
